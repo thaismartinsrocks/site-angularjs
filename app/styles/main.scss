@@ -5,7 +5,7 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 
 @font-face {
 	font-family: 'Bree';
-	src: url('../fonts/BreeSerif-Regular.otf') format('opentype');
+	src: url('fonts/BreeSerif-Regular.otf') format('opentype');
 }
 
 .browsehappy {
@@ -106,16 +106,8 @@ a:hover {
 	text-decoration: none;
 }
 
-/* PESSOAL */
-logo {
-	padding: 0;
-}
-
-menu {
-	padding: 0;
-}
-
-#view-main {
+/* VIEWS */
+#view-main, #view-design {
 	padding: 0;
 	width: 100%;
 	height: 100%;
@@ -127,7 +119,11 @@ menu {
 	background: url('../images/background-main.png') repeat 0 0;
 }
 
-#view-main .view-content {
+#view-main {
+	background: url('../images/background-main.png') repeat 0 0;
+}
+
+#view-main .view-content, #view-design .view-content {
 	margin-top: 300px;
 	position: absolute;
 	width: 100%;
@@ -144,6 +140,23 @@ menu {
 	font-size: 40px;
 	margin: 0;
 }
+
+#view-design {
+	background: url('../images/background-design.png') repeat 0 0;
+}
+
+
+ 
+
+/* PESSOAL */
+logo {
+	padding: 0;
+}
+
+menu {
+	padding: 0;
+}
+
 
 #logo {
 	float: left;
