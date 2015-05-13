@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name thaisMartins.controller:DesignCtrl
+ * @name thaisMartins.controller:SitesCtrl
  * @description
- * # DesignCtrl
+ * # SitesCtrl
  * Controller of the thaisMartins
  */
 var app = angular.module('thaisMartins');
-app.controller('DesignCtrl', function ($scope) {
+app.controller('SitesCtrl', function ($scope) {
 	  
 	  $scope.menu = [
          { name:'Início', link:'' },

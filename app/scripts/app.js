@@ -21,9 +21,25 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/sobre-mim', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
+      })
       .when('/design', {
         templateUrl: 'views/design.html',
         controller: 'DesignCtrl'
+      })
+      .when('/sites', {
+        templateUrl: 'views/sites.html',
+        controller: 'SitesCtrl'
+      })
+      .when('/sistemas', {
+        templateUrl: 'views/systems.html',
+        controller: 'SystemsCtrl'
+      })
+      .when('/mobile', {
+        templateUrl: 'views/mobile.html',
+        controller: 'MobileCtrl'
       })
       .otherwise({
         redirectTo: '/'

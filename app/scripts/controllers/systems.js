@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc function
- * @name thaisMartins.controller:MainCtrl
+ * @name thaisMartins.controller:SystemsCtrl
  * @description
- * # MainCtrl
+ * # SystemsCtrl
  * Controller of the thaisMartins
  */
 var app = angular.module('thaisMartins');
-app.controller('MainCtrl', function ($scope) {
+app.controller('SystemsCtrl', function ($scope) {
 	  
-	$scope.menu = [
+    $scope.menu = [
        { name:'Início', link:'' },
        { name:'Sobre Mim', link:'sobre-mim' },
        { name:'Design', link:'design' },
@@ -19,4 +19,5 @@ app.controller('MainCtrl', function ($scope) {
        { name:'Mobile', link:'mobile' },
        { name:'Trabalhos', link:'trabalhos' }
     ];
-});
+    
+  });
