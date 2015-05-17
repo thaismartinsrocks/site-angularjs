@@ -21,9 +21,8 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/sobre-mim', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/main', {
+        redirectTo: function(){ return "/"; }
       })
       .when('/design', {
         templateUrl: 'views/design.html',
@@ -40,6 +39,10 @@ angular
       .when('/mobile', {
         templateUrl: 'views/mobile.html',
         controller: 'MobileCtrl'
+      })
+       .when('/projetos', {
+        templateUrl: 'views/projects.html',
+        controller: 'ProjectsCtrl'
       })
       .otherwise({
         redirectTo: '/'

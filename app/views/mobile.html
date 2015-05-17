@@ -1,14 +1,27 @@
-<div id="view-design">
+<div id="view-mobile">
 
 	<logo></logo>
 	<menu></menu>
 
 	<div id="view-content" class="text-center">
-		<h2>Posso te ajudar</h2>
-		<h1>com o visual</h1>
-		<h2>do seu negócio</h2>
+		<div class="mobile">
+			<div class="mobile-logo">LOGO</div>
+			<div class="mobile-menu">
+				<ul>
+					<li>Página Inicial</li>
+					<li>Sobre Nós</li>
+					<li>Serviços</li>
+					<li>Contato</li>
+				</ul>
+			</div>
+			<div class="mobile-main"></div>
+			<div class="mobile-rodapé">Todos os direitos reservados</div>
+		</div>
+		
+		<div class="skills-buttons">
+			<button class="btn btn-default" ng-repeat="skill in skills">{{skill.name}}</button>
+		</div>
 	</div>
-	
 	
 </div>
 

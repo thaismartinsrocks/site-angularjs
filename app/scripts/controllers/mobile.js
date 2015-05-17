@@ -8,16 +8,14 @@
  * Controller of the thaisMartins
  */
 var app = angular.module('thaisMartins');
-app.controller('MobileCtrl', function ($scope) {
+app.controller('MobileCtrl', function ($scope, MenuService) {
 	  
-	  $scope.menu = [
-         { name:'Início', link:'' },
-         { name:'Sobre Mim', link:'sobre-mim' },
-         { name:'Design', link:'design' },
-         { name:'Sites', link:'sites' },
-         { name:'Sistemas', link:'sistemas' },
-         { name:'Mobile', link:'mobile' },
-         { name:'Trabalhos', link:'trabalhos' }
-      ];
+	$scope.menu = MenuService.getItems();
     
-  });
+	$scope.skills = [
+  	  {name:'Phonegap', image:''},
+  	  {name:'Ionic', image:''},
+  	  {name:'ngCordova', image:''},
+  	  {name:'Multiplataforma', image:''},
+  	];
+});

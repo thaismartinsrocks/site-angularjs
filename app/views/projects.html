@@ -1,0 +1,19 @@
+<div id="view-projects">
+
+	<logo></logo>
+	<menu></menu>
+
+	<div class="view-content" class="text-center">
+	
+		<div id="projects">
+			<div class="project" ng-repeat="project in projects">
+				<img src="{{project.image}}" alt="{{project.name}}" title="{{project.name}}" />
+				<h1>{{project.name}}</h1>
+				<p>{{project.shortDescription}}</p>
+				<a href="{{project.link}}" class="btn btn-default"><i class="fa fa-user"></i></a>
+				<a href="{{project.site}}" class="btn btn-default"><i class="fa fa-user"></i></a>
+			</div>
+		</div>
+	</div>
+	
+</div>
