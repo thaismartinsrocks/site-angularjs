@@ -124,7 +124,7 @@ a:hover {
 	width: 100%;
 }
 
-.view-content .skills-buttons button {
+.view-content .skills-buttons button, #view-main .view-content .main-buttons a {
 	font-size: 1.4em;
 	padding: 10px 80px;
 	border: none;
@@ -134,17 +134,17 @@ a:hover {
     border-radius: 0;
 }
 
-.view-content .skills-buttons button i {
+.view-content .skills-buttons button i, #view-main .view-content .main-buttons a i {
 	margin-right: 10px;
 	font-size: 0.8em;
 }
 
-.view-content .skills-buttons button:nth-child(even) {
+.view-content .skills-buttons button:nth-child(even), #view-main .view-content .main-buttons a:nth-child(even) {
 	background-color: #c56459;
 	color: #ec7c6d;
 }
 
-.view-content .skills-buttons button:nth-child(odd) {
+.view-content .skills-buttons button:nth-child(odd), #view-main .view-content .main-buttons a:nth-child(odd) {
 	background-color: #ec7c6d;
 	color: #c56459;
 }
@@ -154,7 +154,7 @@ a:hover {
 }
 
 #view-main .view-content {
-	margin-top: 300px;
+	margin-top: 250px;
 	position: absolute;
 	width: 100%;
 }
