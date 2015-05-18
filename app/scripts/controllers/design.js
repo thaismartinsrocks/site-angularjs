@@ -11,5 +11,10 @@ var app = angular.module('thaisMartins');
 app.controller('DesignCtrl', function ($scope, MenuService) {
 	  
 	$scope.menu = MenuService.getItems();
+	
+	$scope.skills = [
+   	  {name:'Ps', icon:'desktop'},
+   	  {name:'Ai', icon:'file-image-o'},
+   	];
     
  });

@@ -3,12 +3,82 @@
 	<logo></logo>
 	<menu></menu>
 
-	<div id="view-content" class="text-center">
-		<h2>Posso te ajudar</h2>
-		<h1>com o visual</h1>
-		<h2>do seu negócio</h2>
-	</div>
+	<div class="view-content">
 	
+		<div class="design-page col-sm-offset-1 col-sm-5 col-xs-12">
+			<div class="design-logo col-sm-4">LOGO</div>
+			<div class="design-menu col-sm-6 pull-right">
+				<ul>
+					<li>Página Inicial</li>
+					<li>Sobre Nós</li>
+					<li>Serviços</li>
+					<li>Contato</li>
+				</ul>
+			</div>
+			<div class="design-slider col-xs-12">DESTAQUES</div>
+			<div class="design-services col-sm-8">
+				<div class="col-sm-4">
+					<h1>Principal Serviço</h1>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<h1>Principal Serviço</h1>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<h1>Principal Serviço</h1>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="design-social col-sm-4 col-xs-12 pull-right">
+				<div class="box">REDES SOCIAIS</div>
+			</div>
+			
+			<div class="design-clients col-sm-8">
+				<div class="client-left col-sm-1"><i class="fa fa-angle-left"></i></div>
+				<ul class="col-sm-10 text-center">
+					<li>Cliente</li>
+					<li>Cliente</li>
+					<li>Cliente</li>
+				</ul>
+				<div class="client-right col-sm-1"><i class="fa fa-angle-right"></i></div>
+			</div>
+			
+			<div class="design-rodape col-xs-12">
+				<div class="design-item col-xs-12 col-sm-4">Menu de navegação</div>
+				<div class="design-item col-xs-12 col-sm-4">Links para as redes socias</div>
+				<div class="design-item col-xs-12 col-sm-4">Contatos da empresa</div>
+			</div>
+		</div>
+		
+		<div class="col-sm-offset-1 col-sm-5 col-xs-12">
+			<div class="description">
+				<h2>Posso te ajudar</h2>
+				<h1>com o visual</h1>
+				<h2>do seu negócio</h2>
+			</div>
+			
+			<div class="skills-buttons">
+				<button class="btn btn-default" ng-repeat="skill in skills"><i class="fa fa-{{skill.icon}}"></i> {{skill.name}}</button>
+			</div>
+		</div>
+	</div>
 	
 </div>
 
