@@ -18,6 +18,6 @@ app.controller('SystemsCtrl', function ($scope, MenuService) {
    	  {name:'Bootstrap', image:''},
    	  {name:'Javascript', image:''},
    	  {name:'AngularJs', image:''},
-   	  {name:'Cross Browser', image:''},
+   	  {name:'Cross-Browser', image:''},
    	];
 });

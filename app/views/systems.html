@@ -5,19 +5,22 @@
 
 	<div class="view-content" class="text-center">
 	
-		<div class="html-text">
+		<div class="systems-box col-sm-5 col-sm-offset-1 col-xs-12">
 			<h1>Bem vindo ao seu novo sistema</h1>
-			<div class="html-box">
+			<div class="systems-login-box">
 				<p>Entre com seus dados de acesso:</p>
-				<div class="html-input"><i class="fa fa-user"></i> Digite seu usuário</div>
-				<div class="html-input"><i class="fa fa-user"></i> Digite sua senha</div>
-				<div class="html-button">Entrar</div>
+				<div class="systems-input"><i class="fa fa-user"></i> digite seu usuário</div>
+				<div class="systems-input"><i class="fa fa-key"></i> digite sua senha</div>
+				<div class="systems-button">Entrar</div>
 			</div>
 		</div>
 		
-		<div class="skills-buttons">
-			<button class="btn btn-default" ng-repeat="skill in skills">{{skill.name}}</button>
+		<div class="col-sm-5 col-xs-12">
+			<p>Seu sistema a um clique </p>
+			<div class="skills-buttons">
+				<button class="btn btn-default" ng-repeat="skill in skills">{{skill.name}}</button>
+			</div>
 		</div>
+		
 	</div>
-	
 </div>
