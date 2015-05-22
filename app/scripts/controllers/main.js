@@ -8,8 +8,15 @@
  * Controller of the thaisMartins
  */
 var app = angular.module('thaisMartins');
-app.controller('MainCtrl', function ($scope, MenuService) {
-	  
+app.controller('MainCtrl', function ($scope, $timeout, MenuService) {
+	
+	$scope.showFirst = true;
+	$scope.showSecond = true;
+	$scope.showThird = true;
+	$scope.showFourth = true;
+	$scope.showFifth = true;
+	$scope.showSixth = true;
+	
 	$scope.menu = MenuService.getItems();
 	
 	$scope.networks = [
@@ -47,7 +54,8 @@ app.controller('MainCtrl', function ($scope, MenuService) {
 		{ id:'xsmall', name:'Scrum' },
 		{ id:'medium', name:'Kanban' },
 		{ id:'small', name:'Lean' }
-   ];
-	
+    ];
+
+	$timeout(function(){$scope.shakeButton = true}, 3000);
 	
 });
