@@ -13,6 +13,7 @@ angular
     'ngMessages',
     'ngResource',
     'ngRoute',
+    'ngAnimate',
     'ngTouch'
   ])
   .config(function ($routeProvider) {
