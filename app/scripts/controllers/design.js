@@ -13,8 +13,10 @@ app.controller('DesignCtrl', function ($scope, MenuService) {
 	$scope.menu = MenuService.getItems();
 	
 	$scope.skills = [
-   	  {name:'Ps', icon:'desktop'},
-   	  {name:'Ai', icon:'file-image-o'},
+   	  {name:'Wireframe', icon:'sitemap'},
+   	  {name:'UI / UX', icon:'users'},
+   	  {name:'Photoshop', icon:'desktop'},
+   	  {name:'Illustrator', icon:'file-image-o'},
    	];
     
  });

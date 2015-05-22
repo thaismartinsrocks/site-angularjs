@@ -6,8 +6,8 @@
 	<div class="view-content">
 	
 		<div class="design-page col-sm-offset-1 col-sm-5 col-xs-12">
-			<div class="design-logo col-sm-4">LOGO</div>
-			<div class="design-menu col-sm-6 pull-right">
+			<div class="design-logo col-sm-2">LOGO</div>
+			<div class="design-menu col-sm-8 pull-right">
 				<ul>
 					<li>Página Inicial</li>
 					<li>Sobre Nós</li>
@@ -15,10 +15,24 @@
 					<li>Contato</li>
 				</ul>
 			</div>
-			<div class="design-slider col-xs-12">DESTAQUES</div>
+			<div class="design-slider col-xs-12">
+				<div class="design-square col-sm-7">
+					<img src="images/icons/chart.png" alt="Destaque" title="Destaque" />
+				</div>
+				<div class="design-text col-sm-4">
+					<h1>Produto em destaque</h1>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="design-button">ver +</div>
+				</div>
+			</div>
 			<div class="design-services col-sm-8">
 				<div class="col-sm-4">
-					<h1>Principal Serviço</h1>
+					<h1>Seu Serviço</h1>
 					<ul>
 						<li></li>
 						<li></li>
@@ -27,7 +41,7 @@
 					</ul>
 				</div>
 				<div class="col-sm-4">
-					<h1>Principal Serviço</h1>
+					<h1>Seu Serviço</h1>
 					<ul>
 						<li></li>
 						<li></li>
@@ -36,7 +50,7 @@
 					</ul>
 				</div>
 				<div class="col-sm-4">
-					<h1>Principal Serviço</h1>
+					<h1>Seu Serviço</h1>
 					<ul>
 						<li></li>
 						<li></li>
@@ -51,23 +65,36 @@
 			</div>
 			
 			<div class="design-clients col-sm-8">
-				<div class="client-left col-sm-1"><i class="fa fa-angle-left"></i></div>
-				<ul class="col-sm-10 text-center">
-					<li>Cliente</li>
-					<li>Cliente</li>
-					<li>Cliente</li>
-				</ul>
-				<div class="client-right col-sm-1"><i class="fa fa-angle-right"></i></div>
+				<div class="client-left"><i class="fa fa-angle-left"></i></div>
+				<div class="design-client">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<p>Cliente Tal, da empresa Tal</p>
+				</div>
+				<div class="design-client">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<p>Cliente Tal, da empresa Tal</p>
+				</div>
+				<div class="client-right"><i class="fa fa-angle-right"></i></div>
 			</div>
 			
 			<div class="design-rodape col-xs-12">
 				<div class="design-item col-xs-12 col-sm-4">Menu de navegação</div>
-				<div class="design-item col-xs-12 col-sm-4">Links para as redes socias</div>
+				<div class="design-item col-xs-12 col-sm-4">Links para redes socias</div>
 				<div class="design-item col-xs-12 col-sm-4">Contatos da empresa</div>
 			</div>
 		</div>
 		
-		<div class="col-sm-offset-1 col-sm-5 col-xs-12">
+		<div class="col-sm-offset-1 col-sm-4 col-xs-12">
 			<div class="description">
 				<h2>Posso te ajudar</h2>
 				<h1>com o visual</h1>
@@ -75,7 +102,9 @@
 			</div>
 			
 			<div class="skills-buttons">
-				<button class="btn btn-default" ng-repeat="skill in skills"><i class="fa fa-{{skill.icon}}"></i> {{skill.name}}</button>
+				<button class="btn btn-default" ng-repeat="skill in skills">
+					<i class="fa fa-{{skill.icon}}"></i> {{skill.name}}
+				</button>
 			</div>
 		</div>
 	</div>
