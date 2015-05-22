@@ -13,11 +13,11 @@ app.controller('SitesCtrl', function ($scope, MenuService) {
 	$scope.menu = MenuService.getItems();
 	
 	$scope.skills = [
-	  {name:'HTML5', image:''},
-	  {name:'CSS3', image:''},
-	  {name:'Bootstrap', image:''},
-	  {name:'Javascript', image:''},
-	  {name:'AngularJs', image:''},
-	  {name:'Cross Browser', image:''},
+	  {name:'HTML5', icon:'html5'},
+	  {name:'CSS3', icon:'css3'},
+	  {name:'Bootstrap', icon:'bold'},
+	  {name:'Javascript', icon:'code'},
+	  {name:'AngularJs', icon:'buysellads'},
+	  {name:'Cross Browser', icon:'desktop'},
 	];
 });

@@ -6,28 +6,34 @@
 	<div class="view-content">
 	
 		<div class="html-text col-sm-offset-1 col-sm-5 col-xs-12">
-			<p class="align-first"><xmp><!doctype html></xmp></p>
-			<p class="align-first"><xmp><html class="no-js" lang="pt"></xmp></p>
+			<xmp class="align-first"><!doctype html></xmp>
+			<xmp class="align-first"><html class="no-js" lang="pt"></xmp>
 			
-				<p class="align-second"><xmp><head></xmp></p>
-					<p class="align-third"><xmp><meta charset="utf-8"></xmp></p>
-					<p class="align-third"><xmp><meta http-equiv="x-ua-compatible" content="ie=edge"></xmp></p>
-					<p class="align-third"><xmp><title>Título do seu novo site</title></xmp></p>
-					<p class="align-third"><xmp><meta name="description" content="Sua descrição"></xmp></p>
-					<p class="align-third"><xmp><meta name="viewport" content="width=device-width, initial-scale=1"></xmp></p>
-				<p class="align-second"><xmp></head></xmp></p>
+				<xmp class="align-second"><head></xmp>
+					<xmp class="align-third"><meta charset="utf-8"></xmp>
+					<xmp class="align-third"><meta http-equiv="x-ua-compatible" content="ie=edge"></xmp>
+					<xmp class="align-third"><title>Título do seu novo site</title></xmp>
+					<xmp class="align-third"><meta name="description" content="Sua descrição"></xmp>
+					<xmp class="align-third"><meta name="viewport" content="width=device-width, initial-scale=1"></xmp>
+				<xmp class="align-second"></head></xmp>
 				
-				<p class="align-second"><xmp><body></xmp></p>
-					<p class="align-third"><xmp><p>Transformo o visual da sua marca em estrutura web</p></xmp></p>
-				<p class="align-second"><xmp></body></xmp></p>
+				<xmp class="align-second"><body></xmp>
+					<xmp class="align-third"><p>...</p></xmp>
+				<xmp class="align-second"></body></xmp>
 				
-			<p class="align-first"><xmp></html></xmp></p>
+			<xmp class="align-first"></html></xmp>
 		</div>
 		
-		<div class="col-sm-5 col-xs-12">
-			<p>Seu sistema a um clique </p>
+		<div class="col-sm-offset-1 col-sm-4 col-xs-12">
+			<div class="description">
+				<h2>Transformo o visual em</h2>
+				<h1>estrutura web</h1>
+				<h2>aquele visual da sua marca</h2>
+			</div>
 			<div class="skills-buttons">
-				<button class="btn btn-default" ng-repeat="skill in skills">{{skill.name}}</button>
+				<button class="btn btn-default" ng-repeat="skill in skills">
+					<i class="fa fa-{{skill.icon}}"></i> {{skill.name}}
+				</button>
 			</div>
 		</div>
 		
