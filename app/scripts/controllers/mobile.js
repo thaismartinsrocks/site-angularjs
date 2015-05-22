@@ -13,9 +13,9 @@ app.controller('MobileCtrl', function ($scope, MenuService) {
 	$scope.menu = MenuService.getItems();
     
 	$scope.skills = [
-  	  {name:'Phonegap', image:''},
-  	  {name:'Ionic', image:''},
-  	  {name:'ngCordova', image:''},
-  	  {name:'Multiplataforma', image:''},
+  	  {name:'Phonegap', icon:'mobile-phone'},
+  	  {name:'Ionic', icon:'circle-o'},
+  	  {name:'ngCordova', icon:'cube'},
+  	  {name:'Multiplataforma', icon:'inbox'},
   	];
 });
