@@ -15,10 +15,15 @@
 			</div>
 		</div>
 		
-		<div class="col-sm-5 col-xs-12">
-			<p>Seu sistema a um clique </p>
+		<div class="col-sm-offset-1 col-sm-4 col-xs-12">
+			<div class="description">
+				<h2>Sua estrutura em</h2>
+				<h1>sistema web</h1>
+			</div>
 			<div class="skills-buttons">
-				<button class="btn btn-default" ng-repeat="skill in skills">{{skill.name}}</button>
+				<button class="btn btn-default" ng-repeat="skill in skills">
+					<i class="fa fa-{{skill.icon}}"></i> {{skill.name}}
+				</button>
 			</div>
 		</div>
 		
