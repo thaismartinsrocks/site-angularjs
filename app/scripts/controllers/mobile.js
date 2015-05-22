@@ -14,7 +14,7 @@ app.controller('MobileCtrl', function ($scope, MenuService) {
     
 	$scope.skills = [
   	  {name:'Phonegap', icon:'mobile-phone'},
-  	  {name:'Ionic', icon:'circle-o'},
+  	  {name:'Ionic', icon:'bullseye'},
   	  {name:'ngCordova', icon:'cube'},
   	  {name:'Multiplataforma', icon:'inbox'},
   	];

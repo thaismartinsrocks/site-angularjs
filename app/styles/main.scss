@@ -283,53 +283,6 @@ menu {
 }
 
 
-/************** VIEW-SYSTEMS ****************/
-#view-systems {
-	background: url('../images/background-systems.png') repeat 0 0;
-}
-
-#view-systems .view-content .systems-box {
-	font-family: 'Lato', sans-serif;
-	background-color: #3a3b4a; 
-	color: #ff8282;
-	padding: 50px;
-	text-align: center;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
-	-webkit-box-shadow: 0px 0px 25px 0px rgba(171,171,171,1);
-	-moz-box-shadow: 0px 0px 25px 0px rgba(171,171,171,1);
-	box-shadow: 0px 0px 25px 0px rgba(171,171,171,1);
-}
-
-#view-systems .view-content .systems-box h1 {
-	margin-bottom: 30px;
-}
-
-#view-systems .view-content .systems-box .systems-input {
-	width: 50%;
-	margin: 10px 25%;
-	border-bottom: 1px solid #696673;
-	padding: 10px;
-	color: #696673;
-	text-align: left;
-}
-
-#view-systems .view-content .systems-box .systems-input i {
-	margin-right: 15px;
-	color: #ff8282;
-}
-
-#view-systems .view-content .systems-box .systems-button {
-	background-color: #ff8282;
-	color: #fff;
-	padding: 8px;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
-	width: 50%;
-	margin: 20px 25%;
-}
 
 /************** VIEW-MAIN ****************/
 #view-main {
@@ -368,38 +321,6 @@ menu {
 
 #view-main .view-content .next-button a:hover {
 	color: #ec7c6d;
-}
-
-/************** VIEW-SITES ****************/
-#view-sites {
-	background: url('../images/background-sites.png') repeat 0 0;
-}
-
-#view-sites .view-content .html-text {
-	color: #d1cbd2;
-	font-size: 16px;
-}
-
-#view-sites .view-content .html-text .align-first {
-	margin-left: 0px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-#view-sites .view-content .html-text .align-second {
-	margin-left: 20px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-#view-sites .view-content .html-text .align-third {
-	margin-left: 40px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-#view-sites .view-content .html-text .big-font {
-	font-size:18px;
 }
 
 
@@ -464,11 +385,6 @@ menu {
 }
 
 #view-design .view-content .design-page .design-slider .design-square {
-	/* -moz-border-image: url('../images/icons/hand-line.png') 10 repeat;
-	-webkit-border-image: url('../images/icons/hand-line.png') 10 repeat;
-    -o-border-image: url('../images/icons/hand-line.png') 10 repeat;
-    border-image: url('../images/icons/hand-line.png') 10 repeat;
-	border-width: 5px; */
 	padding: 50px;
 }
 
@@ -577,8 +493,178 @@ menu {
 	background-repeat: repeat;
 	text-align: center;
 }
- 
- 
+
+
+/************** VIEW-SITES ****************/
+#view-sites {
+	background: url('../images/background-sites.png') repeat 0 0;
+}
+
+#view-sites .view-content .html-text {
+	color: #d1cbd2;
+	font-size: 16px;
+}
+
+#view-sites .view-content .html-text .align-first {
+	margin-left: 0px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#view-sites .view-content .html-text .align-second {
+	margin-left: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#view-sites .view-content .html-text .align-third {
+	margin-left: 40px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#view-sites .view-content .html-text .big-font {
+	font-size:18px;
+}
+
+
+/************** VIEW-SYSTEMS ****************/
+#view-systems {
+	background: url('../images/background-systems.png') repeat 0 0;
+}
+
+#view-systems .view-content .systems-box {
+	font-family: 'Lato', sans-serif;
+	background-color: #3a3b4a; 
+	color: #ff8282;
+	padding: 50px;
+	text-align: center;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-shadow: 0px 0px 25px 0px rgba(171,171,171,1);
+	-moz-box-shadow: 0px 0px 25px 0px rgba(171,171,171,1);
+	box-shadow: 0px 0px 25px 0px rgba(171,171,171,1);
+}
+
+#view-systems .view-content .systems-box h1 {
+	margin-bottom: 30px;
+}
+
+#view-systems .view-content .systems-box .systems-input {
+	width: 50%;
+	margin: 10px 25%;
+	border-bottom: 1px solid #696673;
+	padding: 10px;
+	color: #696673;
+	text-align: left;
+}
+
+#view-systems .view-content .systems-box .systems-input i {
+	margin-right: 15px;
+	color: #ff8282;
+}
+
+#view-systems .view-content .systems-box .systems-button {
+	background-color: #ff8282;
+	color: #fff;
+	padding: 8px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	width: 50%;
+	margin: 20px 25%;
+}
+
+
+/************** VIEW-MOBILE ****************/
+#view-mobile {
+	background: url('../images/background-mobile.png') repeat 0 0;
+}
+
+#view-mobile .view-content .mobile-page {
+	width: 60%;
+	margin: 0 20%;
+	padding: 0;
+	background-image: url('../images/app-bg.jpg');
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(153,153,153,1);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(153,153,153,1);
+	box-shadow: 0px 0px 15px 0px rgba(153,153,153,1);
+	font-family: 'Exo', sans-serif;
+	font-size: 12px;
+	height: 100%;
+}
+
+#view-mobile .view-content .mobile-page .mobile-login {
+	height: 100%;
+}
+
+#view-mobile .view-content .mobile-page .login-green {
+	background-color: rgba(0,166,146,0.8);
+}
+
+#view-mobile .view-content .mobile-page .login-yellow {
+	background-color: rgba(234,255,117,0.8);
+}
+
+#view-mobile .view-content .mobile-page .mobile-login .mobile-box-login,
+#view-mobile .view-content .mobile-page .mobile-login .mobile-box-login p {
+	margin: 30px 0;
+	color: #fff;
+	text-align: center;
+}
+
+#view-mobile .view-content .mobile-page .mobile-login .mobile-logo {
+	font-size: 36px;
+	text-align: center;
+	padding-top: 85px;
+	color: #fff;
+	font-weight: 100;
+}
+
+#view-mobile .view-content .mobile-page .mobile-login .mobile-box-login .mobile-input {
+	padding: 15px 50px;
+	border-top: 1px solid #00a897;
+	border-bottom: 1px solid #00a897;
+	margin: 2px 0;
+	background-color: #fff;
+	width: 100%;
+	background-color: rgba(255,255,255,0.6);
+}
+
+#view-mobile .view-content .mobile-page .mobile-login .mobile-box-login .mobile-input i {
+	margin-right: 15px;
+	color: #00a897;
+}
+
+#view-mobile .view-content .mobile-page .mobile-login .mobile-box-login .mobile-button,
+#view-mobile .view-content .mobile-page .mobile-login .mobile-box-login .mobile-button-facebook,
+#view-mobile .view-content .mobile-page .mobile-login .mobile-box-login .mobile-button-twitter {
+	
+	background-color: #00a897;
+	width: 50%;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	padding: 10px 0;
+}
+
+#view-mobile .view-content .mobile-page .mobile-login .mobile-box-login .mobile-button {
+	margin: 30px 25% 0 25%;
+}
+
+#view-mobile .view-content .mobile-page .mobile-login .mobile-box-login .mobile-button-facebook {
+	background-color: #3B5998;
+	margin: 30px 25% 5px 25%;
+}
+
+#view-mobile .view-content .mobile-page .mobile-login .mobile-box-login .mobile-button-twitter {
+	background-color: #3CF;
+	margin: 5px 25%;
+}
+
+
+
 /************** VIEW-PROJECTS ****************/
 #view-projects {
 	background: url('../images/background-projects.png') repeat 0 0;
@@ -604,6 +690,7 @@ menu {
 	background-color: #c56459;
 	opacity: 0.95;
 	filter: alpha(opacity=95);
+	-moz-opacity: 0.95;
 }
 
 #view-projects .view-content .project .project-description h1 {
@@ -734,11 +821,13 @@ menu {
     0% {
     	visibility: hidden;
     	opacity: 0;
+    	-moz-opacity: 0;
     	top: -300px;
     }
     100% {
     	top: 0;
     	opacity: 1;
+    	-moz-opacity: 1;
     	visibility: visible;
     }
 }
@@ -747,12 +836,14 @@ menu {
     0% {
     	visibility: hidden;
     	opacity: 0;
+    	-moz-opacity: 0;
     	top: -500px;
     }
     100% {
     	left: 0;
     	visibility: visible;
     	opacity: 1;
+    	-moz-opacity: 1;
     }
 }
 
@@ -761,33 +852,39 @@ menu {
     	bottom: -500px;
     	visibility: hidden;
     	opacity: 0;
+    	-moz-opacity: 0;
     }
     100% {
     	bottom: 0;
     	visibility: visible;
     	opacity: 1;
+    	-moz-opacity: 1;
     }
 }
 
 @-webkit-keyframes burst {
   0% {
-    opacity: .6;
+    opacity: 0.6;
+    -moz-opacity: 0.6;
   }
 
   50% {
     -webkit-transform: scale(1.8);
     transform: scale(1.8);
     opacity: 0;
+    -moz-opacity: 0;
   }
 
   100% {
     opacity: 0;
+    -moz-opacity: 0;
   }
 }
 
 @keyframes burst {
   0% {
-    opacity: .6;
+    opacity: 0.6;
+    -moz-opacity: 0.60;
   }
 
   50% {
@@ -795,9 +892,11 @@ menu {
     -ms-transform: scale(1.8);
     transform: scale(1.8);
     opacity: 0;
+    -moz-opacity: 0;
   }
 
   100% {
     opacity: 0;
+    -moz-opacity: 0;
   }
 }
