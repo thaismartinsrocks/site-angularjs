@@ -23,7 +23,7 @@ angular
         controller: 'MainCtrl'
       })
       .when('/main', {
-        redirectTo: function(){ return "/"; }
+        redirectTo: function(){ return '/'; }
       })
       .when('/design', {
         templateUrl: 'views/design.html',

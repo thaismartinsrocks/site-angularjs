@@ -14,6 +14,6 @@ app.service('MenuService', function () {
 	
 	this.getItems = function() {
 		return this._items;
-	}
+	};
 	
 });

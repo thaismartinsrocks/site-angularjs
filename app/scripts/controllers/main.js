@@ -8,7 +8,7 @@
  * Controller of the thaisMartins
  */
 var app = angular.module('thaisMartins');
-app.controller('MainCtrl', function ($scope, $timeout, MenuService) {
+app.controller('MainCtrl', function ($scope, $timeout, $http, MenuService) {
 	
 	$scope.showFirst = true;
 	$scope.showSecond = true;
@@ -16,6 +16,7 @@ app.controller('MainCtrl', function ($scope, $timeout, MenuService) {
 	$scope.showFourth = true;
 	$scope.showFifth = true;
 	$scope.showSixth = true;
+	$scope.form = [];
 	
 	$scope.menu = MenuService.getItems();
 	
@@ -24,38 +25,39 @@ app.controller('MainCtrl', function ($scope, $timeout, MenuService) {
 	    { name:'Github', icon:'github-alt', link:'#' },
 	];
 	
-	$scope.skills = [
-	    { id:'xsmall', name:'Doctrine ORM' },
-		{ id:'small', name:'CodeIgniter' },
-		{ id:'xbig', name:'PHP' },
-		{ id:'xsmall', name:'Yii Framework' },
-		{ id:'small', name:'CakePHP' },
-		{ id:'medium', name:'Spring' },
-		{ id:'xbig', name:'Java' },
-		{ id:'big', name:'Hibernate' },
-		{ id:'medium', name:'Apache' },
-		{ id:'xsmall', name:'Ngnix' },
-		{ id:'medium', name:'PHP-FPM' },
-		{ id:'medium', name:'JBoss' },
-		{ id:'xsmall', name:'TomCat' },
-		{ id:'small', name:'Jenkins' },
-		{ id:'xsmall', name:'Restfull' },
-		{ id:'medium', name:'MySQL' },
-		{ id:'big', name:'Redis' },
-		{ id:'xsmall', name:'Linux' },
-		{ id:'big', name:'AWS' },
-		{ id:'small', name:'Eclipse' },
-		{ id:'medium', name:'Git' },
-		{ id:'xsmall', name:'SVN' },
-		{ id:'big', name:'Orientação a Objetos' },
-		{ id:'medium', name:'Padrões de Projetos' },
-		{ id:'small', name:'TDD' },
-		{ id:'big', name:'Engenharia de Requisitos' },
-		{ id:'xsmall', name:'Scrum' },
-		{ id:'medium', name:'Kanban' },
-		{ id:'small', name:'Lean' }
-    ];
+	$scope.sendMail = function() {
+		
+		console.log($scope.form);
+		var params = $.param({
+						name: $scope.form.name,
+						mail: $scope.form.mail,
+						message: $scope.form.message,
+						phone: $scope.form.phone
+					 });
+		
+		console.log(params);
+		
+		$http.post('http://localhost/mail.php', params, {headers: {'Content-Type': 'application/x-www-form-urlencoded'}}
+		).
+		success(function(data){
+	         console.log(data);
+	         if (data.success) { //success comes from the return json object
+	             $scope.submitButtonDisabled = true;
+	             $scope.resultMessage = data.message;
+	             $scope.result='bg-success';
+	         } else {
+	             $scope.submitButtonDisabled = false;
+	             $scope.resultMessage = data.message;
+	             $scope.result='bg-danger';
+	         }
+	     }).
+	     error(function(data, status, headers, config) {
+	    	console.log(data);
+	    });
+	};
 
-	$timeout(function(){$scope.shakeButton = true}, 3000);
+	$timeout(function() {
+		$scope.shakeButton = true;
+	}, 3000);
 	
 });

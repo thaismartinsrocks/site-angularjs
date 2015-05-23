@@ -23,9 +23,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container-fluid">
     	<div ng-view=""></div>
-    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -48,6 +46,9 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/br-validations/releases/br-validations.js"></script>
+    <script src="bower_components/string-mask/src/string-mask.js"></script>
+    <script src="bower_components/angular-input-masks/angular-input-masks.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -56,6 +57,7 @@
         
         <script src="scripts/directives/menu.js"></script>
         <script src="scripts/directives/logo.js"></script>
+        <script src="scripts/directives/modal.js"></script>
         
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/design.js"></script>

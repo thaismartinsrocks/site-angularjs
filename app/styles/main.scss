@@ -8,6 +8,51 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 	src: url('fonts/BreeSerif-Regular.otf') format('opentype');
 }
 
+/************** MIXIN ****************/
+@mixin deviceBreak($device) {
+  
+  @if $device == phone {
+  	@media (max-width: 480px) {
+      @content;
+    }
+  }
+  
+  @else if $device == tablet {
+  	@media (min-width: 481px) and (max-width: 767px) {
+      @content;
+    }
+  }
+   
+  @else if $device == desktop {
+  	@media (min-width: 768px) {
+      @content;
+    }
+  }
+  
+  @else if $device == non-phone {
+  	@media (min-width: 481px) {
+      @content;
+    }
+  }
+  
+}
+
+.example-mobile {
+	
+	@include deviceBreak(phone) {
+		background-color: blue;
+	}
+	
+	@include deviceBreak(tablet) {
+		background-color: green;
+	}
+	
+	@include deviceBreak(desktop) {
+		background-color: red;
+	}
+	
+}
+
 /************** RESET ****************/
 html, body, .ng-scope, .ng-scope::before {
 	margin:0;
@@ -28,6 +73,15 @@ a:hover {
 xmp {
 	white-space: pre-wrap;
 	font-family: 'Bree', serif;
+}
+
+/************** MODAL **************/
+#fullmodal {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(235,125,110,0.6);
+	position: absolute;
+	z-index: 9999;
 }
 
 /************** LOGO ****************/
@@ -67,22 +121,33 @@ menu {
 	position: relative;
 	overflow: hidden;
 	float: right;
-	width: 100px;
 	height: 100px;
-	-webkit-transition: all 0.2s ease 0.05s;
-	-moz-transition: all 0.2s ease 0.05s;
-	-o-transition: all 0.2s ease 0.05s;
-	transition: all 0.2s ease 0.05s;
-	z-index: 9999;
+	z-index: 9998;
+	
+	@include deviceBreak(non-phone) {
+		-webkit-transition: all 0.2s ease 0.05s;
+		-moz-transition: all 0.2s ease 0.05s;
+		-o-transition: all 0.2s ease 0.05s;
+		transition: all 0.2s ease 0.05s;
+		width: 100px;
+	}
+	
+	@include deviceBreak(phone) {
+		width: 20%;
+	}
 }
 
 #menu-content.show {
+	
 	width: 600px !important;
 	height: 525px !important;
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
+	
+	@include deviceBreak(non-phone) {
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+	}
 }
 
 #menu {
@@ -144,9 +209,11 @@ menu {
 	width: 500px;
 }
 
-#menu-contato a {
-	padding: 0 17px;
+#menu-contato span {
 	float: left;
+	color: #c56459;
+	font-size: 35px;
+  	margin: 7px 17px;
 }
 
 #menu-contato .title {
@@ -173,13 +240,6 @@ menu {
 	font-size: 12px;
 	margin-right: 3px;
 }
-
-#menu-contato a span {
-	color: #c56459;
-	font-size: 35px;
-  	padding: 7px 0;
-}
-
 
 #form-contato form {
 	padding: 0 20px;
@@ -287,7 +347,6 @@ menu {
 /************** VIEW-MAIN ****************/
 #view-main {
 	background: url('../images/background-main.png') repeat 0 0;
-	height: 100%;
 	overflow: hidden;
 }
 
@@ -344,7 +403,7 @@ menu {
 	margin: 20px 0 20px 10px;
 	padding: 10px;
 	text-align: center;
-	background-image: url('../images/icons/hand-full.png');
+	background-image: url('../images/hand-full.png');
 	background-repeat: repeat;
 }
 
@@ -354,7 +413,7 @@ menu {
 }
 
 #view-design .view-content .design-page .design-menu ul {
-	background-image: url('../images/icons/hand-full.png');
+	background-image: url('../images/hand-full.png');
 	background-repeat: repeat;
 	margin: 20px 0;
 	height: 40px;
@@ -368,10 +427,10 @@ menu {
 }
 
 #view-design .view-content .design-page .design-slider {
-	-moz-border-image: url('../images/icons/hand-line.png') 10 repeat;
-	-webkit-border-image: url('../images/icons/hand-line.png') 10 repeat;
-    -o-border-image: url('../images/icons/hand-line.png') 10 repeat;
-    border-image: url('../images/icons/hand-line.png') 10 repeat;
+	-moz-border-image: url('../images/hand-line.png') 10 repeat;
+	-webkit-border-image: url('../images/hand-line.png') 10 repeat;
+    -o-border-image: url('../images/hand-line.png') 10 repeat;
+    border-image: url('../images/hand-line.png') 10 repeat;
 	border-width: 5px;
 	padding: 30px 0;
 	text-align: center;
@@ -406,14 +465,14 @@ menu {
 	width: 100%;
 	height: 5px;
 	margin: 7px 0;
-	background-image: url('../images/icons/hand-line.png');
+	background-image: url('../images/hand-line.png');
 	background-repeat: repeat;
 }
 
 #view-design .view-content .design-page .design-text .design-button {
 	width: 50%;
 	height: 15px;
-	background-image: url('../images/icons/hand-full.png');
+	background-image: url('../images/hand-full.png');
 	background-repeat: repeat;
 	margin: 5px 0 0 50%;
 	font-size: 10px;
@@ -437,7 +496,7 @@ menu {
 	width: 100%;
 	height: 5px;
 	margin: 7px 0;
-	background-image: url('../images/icons/hand-line.png');
+	background-image: url('../images/hand-line.png');
 	background-repeat: repeat;
 }
 
@@ -448,7 +507,7 @@ menu {
 #view-design .view-content .design-page .design-social .box {
 	margin: 10px;
 	padding: 100px 0;
-	background-image: url('../images/icons/hand-full.png');
+	background-image: url('../images/hand-full.png');
 	background-repeat: repeat;
 }
 
@@ -479,7 +538,7 @@ menu {
 	width: 100%;
 	height: 5px;
 	margin: 7px 0;
-	background-image: url('../images/icons/hand-line.png');
+	background-image: url('../images/hand-line.png');
 	background-repeat: repeat;
 }
 
@@ -489,7 +548,7 @@ menu {
 
 #view-design .view-content .design-page .design-rodape {
 	padding: 20px;
-	background-image: url('../images/icons/hand-full.png');
+	background-image: url('../images/hand-full.png');
 	background-repeat: repeat;
 	text-align: center;
 }
@@ -600,11 +659,54 @@ menu {
 }
 
 #view-mobile .view-content .mobile-page .login-green {
-	background-color: rgba(0,166,146,0.8);
+	background-color: rgba(0,166,146,0.6);
 }
 
-#view-mobile .view-content .mobile-page .login-yellow {
-	background-color: rgba(234,255,117,0.8);
+#view-mobile .view-content .mobile-page .login-green .mobile-box-login .mobile-input {
+	border-top: 1px solid #00a897;
+	border-bottom: 1px solid #00a897;
+}
+
+#view-mobile .view-content .mobile-page .login-green .mobile-box-login .mobile-input i {
+	color: #00a897;
+}
+
+#view-mobile .view-content .mobile-page .login-green .mobile-box-login .mobile-button {
+	background-color: #048778;
+}
+
+#view-mobile .view-content .mobile-page .login-red {
+	background-color: rgba(222,84,89,0.6);
+}
+
+#view-mobile .view-content .mobile-page .login-red .mobile-box-login .mobile-input {
+	border-top: 1px solid #e0555a;
+	border-bottom: 1px solid #e0555a;
+}
+
+#view-mobile .view-content .mobile-page .login-red .mobile-box-login .mobile-input i {
+	color: #e0555a;
+}
+
+#view-mobile .view-content .mobile-page .login-red .mobile-box-login .mobile-button {
+	background-color: #cf464b;
+}
+
+#view-mobile .view-content .mobile-page .login-blue {
+	background-color: rgba(48,146,199,0.6);
+}
+
+#view-mobile .view-content .mobile-page .login-blue .mobile-box-login .mobile-input {
+	border-top: 1px solid #3091c9;
+	border-bottom: 1px solid #3091c9;
+}
+
+#view-mobile .view-content .mobile-page .login-blue .mobile-box-login .mobile-input i {
+	color: #3091c9;
+}
+
+#view-mobile .view-content .mobile-page .login-blue .mobile-box-login .mobile-button {
+	background-color: #3493c2;
 }
 
 #view-mobile .view-content .mobile-page .mobile-login .mobile-box-login,
@@ -624,24 +726,19 @@ menu {
 
 #view-mobile .view-content .mobile-page .mobile-login .mobile-box-login .mobile-input {
 	padding: 15px 50px;
-	border-top: 1px solid #00a897;
-	border-bottom: 1px solid #00a897;
 	margin: 2px 0;
 	background-color: #fff;
 	width: 100%;
-	background-color: rgba(255,255,255,0.6);
+	background-color: rgba(255,255,255,0.4);
 }
 
 #view-mobile .view-content .mobile-page .mobile-login .mobile-box-login .mobile-input i {
 	margin-right: 15px;
-	color: #00a897;
 }
 
 #view-mobile .view-content .mobile-page .mobile-login .mobile-box-login .mobile-button,
 #view-mobile .view-content .mobile-page .mobile-login .mobile-box-login .mobile-button-facebook,
 #view-mobile .view-content .mobile-page .mobile-login .mobile-box-login .mobile-button-twitter {
-	
-	background-color: #00a897;
 	width: 50%;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
@@ -716,6 +813,18 @@ menu {
 
 
 /************** ANIMATES ****************/
+.ng-enter, .ng-enter-active {
+	position: relative;
+	display: block;
+    -webkit-animation: burstIn 0.2s ease-in-out;
+}
+
+.ng-leave, .ng-leave-active {
+	position: relative;
+	display: block;
+    -webkit-animation: burstOut 0.2s all;
+}
+
 .anime-title-first {
 	position: relative;
 	display: block;
@@ -749,7 +858,7 @@ menu {
 .anime-title-sixth {
 	position: relative;
 	display: block;
-    -webkit-animation: titleThird 4.5s ease-in-out;
+    -webkit-animation: titleThird 5.5s ease-in-out;
 }
 
 .button-down {
@@ -862,39 +971,52 @@ menu {
     }
 }
 
-@-webkit-keyframes burst {
+@-webkit-keyframes burstIn {
   0% {
-    opacity: 0.6;
-    -moz-opacity: 0.6;
-  }
-
-  50% {
-    -webkit-transform: scale(1.8);
-    transform: scale(1.8);
     opacity: 0;
     -moz-opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
   }
+  100% {
+  	 -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -moz-opacity: 1;
+  }
+}
 
+@keyframes burstIn {
+  0% {
+    opacity: 0;
+    -moz-opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+  	 -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+
+@-webkit-keyframes burstOut {
+  0% {
+    opacity: 1;
+    -moz-opacity: 1;
+  }
   100% {
     opacity: 0;
     -moz-opacity: 0;
   }
 }
 
-@keyframes burst {
+@keyframes burstOut {
   0% {
-    opacity: 0.6;
-    -moz-opacity: 0.60;
+    opacity: 1;
+    -moz-opacity: 1;
   }
-
-  50% {
-    -webkit-transform: scale(1.8);
-    -ms-transform: scale(1.8);
-    transform: scale(1.8);
-    opacity: 0;
-    -moz-opacity: 0;
-  }
-
   100% {
     opacity: 0;
     -moz-opacity: 0;
