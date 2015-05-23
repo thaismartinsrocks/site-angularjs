@@ -5,14 +5,13 @@ app.filter('url', function() {
 
   return function(input) {
     
-	if(input == null){
+	if(input === null){
 		return null;
 	}
 	
 	var output = input;
     output = output.replace(' ', '');
     return output.toLowerCase();
-    
-  }
+  };
   
 });
