@@ -7,7 +7,7 @@ app.directive('menu', function () {
 	 	restrict : 'E',
 	 	controller: function($scope, $element, $attrs, $location) {
         	$scope.toogleMenu = function() {
-        		$scope.showMenu = !$scope.showMenu;
+        		$scope.showMenu = true;
         	}
         }
 	 };

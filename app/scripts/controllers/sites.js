@@ -15,9 +15,11 @@ app.controller('SitesCtrl', function ($scope, MenuService) {
 	$scope.skills = [
 	  {name:'HTML5', icon:'html5'},
 	  {name:'CSS3', icon:'css3'},
+	  {name:'Responsivo', icon:'mobile-phone'},
 	  {name:'Bootstrap', icon:'bold'},
-	  {name:'Javascript', icon:'code'},
+	  {name:'Javascript / OO', icon:'code'},
+	  {name:'Jquery', icon:'code'},
 	  {name:'AngularJs', icon:'buysellads'},
-	  {name:'Cross Browser', icon:'desktop'},
+	  {name:'Crossbrowser', icon:'desktop'},
 	];
 });

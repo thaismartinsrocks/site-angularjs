@@ -138,15 +138,28 @@ menu {
 }
 
 #menu-content.show {
-	
-	width: 600px !important;
-	height: 525px !important;
+
+	height: 525px;
 	
 	@include deviceBreak(non-phone) {
 		-webkit-transition: all 0.5s ease-in-out;
 		-moz-transition: all 0.5s ease-in-out;
 		-o-transition: all 0.5s ease-in-out;
 		transition: all 0.5s ease-in-out;
+		width: 600px;
+	}
+	
+	@include deviceBreak(phone) {
+		width: 100% !important;
+		position: absolute;
+  		top: 0;
+	}
+}
+
+#menu-content.show li.list {
+	
+	@include deviceBreak(phone) {
+		display: none;
 	}
 }
 
@@ -165,6 +178,11 @@ menu {
 	height: 50px;
 	background-color: #c56459;
 	width: 500px;
+	
+	@include deviceBreak(phone) {
+		height: 100%;
+		width: 100%;
+	}
 }
 
 #menu-nav ul {
@@ -174,6 +192,13 @@ menu {
 #menu-nav ul li {
 	float: left;
 	list-style: none;
+	
+	@include deviceBreak(phone) {
+		float: none;
+		width: 100%;
+  		text-align: center;
+  		border-bottom: 1px solid #ec7c6d;
+	}
 }
 
 #menu-nav ul li a {
@@ -207,6 +232,11 @@ menu {
 	background-color: #ec7c6d;
 	float: right;
 	width: 500px;
+	
+	@include deviceBreak(phone) {
+		width: 100%;
+		float: none;
+	}
 }
 
 #menu-contato span {
@@ -251,6 +281,13 @@ menu {
 }
 
 /************** VIEW-CONTENT-GENERAL ****************/
+.view-content .skills-buttons {
+	
+	@include deviceBreak(phone) {
+		margin-bottom: 25px;
+	}
+}
+
 .view-content .skills-buttons button {
 	font-size: 1.2em;
 	padding: 10px;
@@ -322,6 +359,10 @@ menu {
 #view-mobile .view-content .description {
 	margin-bottom: 30px;
 	text-align: center;
+	
+	@include deviceBreak(phone) {
+		margin-top: 30px;
+	}
 }
 
 #view-design .view-content .description h1,
@@ -397,6 +438,11 @@ menu {
 	font-family: 'Rock Salt', cursive;
 	font-size: 12px;
 	color: #bfbfbf;
+	
+	@include deviceBreak(phone) {
+		width: 90% !important;
+		margin: 0 5%;
+	}
 }
 
 #view-design .view-content .design-page .design-logo {
@@ -444,7 +490,7 @@ menu {
 }
 
 #view-design .view-content .design-page .design-slider .design-square {
-	padding: 50px;
+	padding: 20px;
 }
 
 #view-design .view-content .design-page .design-text h1 {
@@ -476,6 +522,11 @@ menu {
 	background-repeat: repeat;
 	margin: 5px 0 0 50%;
 	font-size: 10px;
+	
+	@include deviceBreak(phone) {
+		width: 100%;
+		margin: 0;
+	}
 }
 
 #view-design .view-content .design-page .design-services h1 {
