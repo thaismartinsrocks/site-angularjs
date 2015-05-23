@@ -29,6 +29,10 @@ module.exports = function(config) {
       'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-touch/angular-touch.js',
+      'bower_components/angular-animate/angular-animate.js',
+      'bower_components/br-validations/releases/br-validations.js',
+      'bower_components/string-mask/src/string-mask.js',
+      'bower_components/angular-input-masks/angular-input-masks.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",
