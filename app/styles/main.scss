@@ -703,6 +703,11 @@ menu {
 	font-family: 'Exo', sans-serif;
 	font-size: 12px;
 	height: 100%;
+	
+	@include deviceBreak(phone) {
+		width: 90% !important;
+		margin: 0 5%;
+	}
 }
 
 #view-mobile .view-content .mobile-page .mobile-login {
