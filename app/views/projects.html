@@ -1,21 +1,23 @@
-<div id="view-projects">
+<modal item="modalItem" show="showModal" url="baseUrl"></modal>
+
+<div id="view-projects" class="container-fluid">
 
 	<logo></logo>
 	<menu></menu>
-
-	<div class="view-content" class="text-center">
-		<div class="project col-sm-3 col-xs-12 text-center" ng-repeat="project in projects"
-			ng-mouseenter="project.showDescription = true;" ng-mouseleave="project.showDescription = false;">
-			
-			<img src="{{baseUrl}}{{project.name | url}}/{{project.image}}" alt="{{project.name}}" title="{{project.name}}" class="img-responsive" />
-			<div class="project-description" ng-show="project.showDescription == true;">
-				<h1>{{project.name}}</h1>
-				<p>{{project.shortDescription}}</p>
-				<a href="{{project.link}}" class="btn btn-default"><i class="fa fa-desktop"></i></a>
-				<a href="{{project.site}}" class="btn btn-default"><i class="fa fa-chain"></i></a>
-			</div>
-			
-		</div>
-	</div>
 	
+	<div class="view-content text-center">
+		<div ng-repeat="project in projects">
+			<div class="project col-sm-3 col-xs-12 text-center"	ng-mouseenter="project.showDescription = true;"
+				ng-mouseleave="project.showDescription = false;">
+				<img src="{{baseUrl}}{{project.name | url}}/{{project.image}}" alt="{{project.name}}" title="{{project.name}}" class="img-responsive" />
+				<div class="project-description" ng-show="project.showDescription == true;">
+					<h1>{{project.name}}</h1>
+					<p>{{project.shortDescription}}</p>
+					<a ng-show="project.site != null" href="{{project.site}}" target="_blank" class="btn btn-default"><i class="fa fa-chain"></i></a>
+					<a ng-click="showDetails(project)" class="btn btn-default"><i class="fa fa-desktop"></i></a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
 </div>
