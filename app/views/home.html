@@ -1,0 +1,18 @@
+<div id="view-main" class="container-fluid" style="height:{{pageHeight}}px">
+	<div class="view-content text-center">
+		<div id="main-description">
+			<h2 ng-class="{'anime-title-first': showFirst == true}">Olá, eu sou</h2>
+			<h1 ng-class="{'anime-title-second': showSecond == true}">Thais Martins</h1>
+			<h2 ng-class="{'anime-title-third': showThird == true}">8 anos de experiencia em</h2>
+			<h2 ng-class="{'anime-title-fourth': showFourth == true}">desenvolvimento web</h2>
+		</div>
+		<div class="main-buttons" ng-class="{'anime-title-fifth': showFifth == true}">
+			<a ng-repeat="network in networks" href="{{network.link}}" class="btn btn-default">
+				<i class="fa fa-{{network.icon}}"></i> {{network.name}}
+			</a>
+		</div>
+		<div class="next-button" ng-class="{'button-down': shakeButton == true, 'anime-title-sixth': showSixth == true}">
+			<span class="fa fa-angle-double-down" ng-click="goToPage('mobile')"></span>
+		</div>
+	</div>
+</div>

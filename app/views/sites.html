@@ -1,8 +1,4 @@
-<div id="view-sites" class="container-fluid">
-
-	<logo></logo>
-	<menu></menu>
-
+<div id="view-sites" class="container-fluid" style="height:{{pageHeight}}px">
 	<div class="view-content">
 	
 		<div class="html-text col-sm-offset-1 col-sm-5 col-xs-12">
@@ -31,7 +27,7 @@
 				<h2>aquele visual da sua marca</h2>
 			</div>
 			<div class="skills-buttons">
-				<button class="btn btn-default" ng-repeat="skill in skills">
+				<button class="btn btn-default" ng-repeat="skill in skills.sites">
 					<i class="fa fa-{{skill.icon}}"></i> {{skill.name}}
 				</button>
 			</div>

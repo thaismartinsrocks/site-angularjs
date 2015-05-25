@@ -1,8 +1,4 @@
-<div id="view-design" class="container-fluid">
-
-	<logo></logo>
-	<menu></menu>
-
+<div id="view-design" class="container-fluid" style="height:{{pageHeight}}px">
 	<div class="view-content">
 	
 		<div class="design-page col-sm-offset-1 col-sm-5 col-xs-12">
@@ -103,12 +99,10 @@
 			</div>
 			
 			<div class="skills-buttons">
-				<button class="btn btn-default" ng-repeat="skill in skills">
+				<button class="btn btn-default" ng-repeat="skill in skills.design">
 					<i class="fa fa-{{skill.icon}}"></i> {{skill.name}}
 				</button>
 			</div>
 		</div>
 	</div>
-	
 </div>
-

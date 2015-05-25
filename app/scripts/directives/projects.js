@@ -1,9 +1,9 @@
 'use strict';
 
 var app = angular.module('thaisMartins');
-app.directive('logo', function () {
+app.directive('projects', function() {
 	 return {
-	 	templateUrl: 'components/logo.html',
+	 	templateUrl: 'views/projects.html',
 	 	restrict : 'E'
 	 };
 });

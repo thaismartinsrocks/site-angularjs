@@ -8,44 +8,22 @@
  *
  * Main module of the application.
  */
-angular
-  .module('thaisMartins', [
+var app = angular.module(
+'thaisMartins', [
     'ngMessages',
     'ngResource',
     'ngRoute',
     'ngAnimate',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+]);
+
+app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/main', {
-        redirectTo: function(){ return '/'; }
-      })
-      .when('/design', {
-        templateUrl: 'views/design.html',
-        controller: 'DesignCtrl'
-      })
-      .when('/sites', {
-        templateUrl: 'views/sites.html',
-        controller: 'SitesCtrl'
-      })
-      .when('/sistemas', {
-        templateUrl: 'views/systems.html',
-        controller: 'SystemsCtrl'
-      })
-      .when('/mobile', {
-        templateUrl: 'views/mobile.html',
-        controller: 'MobileCtrl'
-      })
-       .when('/projetos', {
-        templateUrl: 'views/projects.html',
-        controller: 'ProjectsCtrl'
-      })
       .otherwise({
         redirectTo: '/'
       });
-  });
+});

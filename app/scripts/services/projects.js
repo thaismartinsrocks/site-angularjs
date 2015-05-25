@@ -1,7 +1,7 @@
 'use strict';
 
 var app = angular.module('thaisMartins');
-app.service('ProjectsService', function () {
+app.service('projectsService', function () {
 	
 	this._items = [
 		 {

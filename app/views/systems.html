@@ -1,8 +1,4 @@
-<div id="view-systems" class="container-fluid">
-
-	<logo></logo>
-	<menu></menu>
-
+<div id="view-systems" class="container-fluid" style="height:{{pageHeight}}px">
 	<div class="view-content" class="text-center">
 	
 		<div class="systems-box col-sm-5 col-sm-offset-1 col-xs-12">
@@ -21,7 +17,7 @@
 				<h1>sistema web</h1>
 			</div>
 			<div class="skills-buttons">
-				<button class="btn btn-default" ng-repeat="skill in skills">
+				<button class="btn btn-default" ng-repeat="skill in skills.systems">
 					<i class="fa fa-{{skill.icon}}"></i> {{skill.name}}
 				</button>
 			</div>

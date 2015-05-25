@@ -1,9 +1,6 @@
-<div id="view-mobile" class="container-fluid">
-
-	<logo></logo>
-	<menu></menu>
-
+<div id="view-mobile" class="container-fluid" style="height:{{pageHeight}}px">
 	<div class="view-content">
+	
 		<div class="col-sm-offset-1 col-sm-5 col-sx-12">
 			<div class="mobile-page">
 				<div class="mobile-login login-{{classPage}}">
@@ -44,12 +41,12 @@
 				<h1>em um app mobile</h1>
 			</div>
 			<div class="skills-buttons">
-				<button class="btn btn-default" ng-repeat="skill in skills">
+				<button class="btn btn-default" ng-repeat="skill in skills.mobile">
 					<i class="fa fa-{{skill.icon}}"></i> {{skill.name}}
 				</button>
 			</div>
 		</div>
+		
 	</div>
-	
 </div>
 

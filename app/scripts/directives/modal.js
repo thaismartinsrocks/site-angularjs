@@ -3,7 +3,7 @@
 var app = angular.module('thaisMartins');
 app.directive('modal', function () {
 	 return {
-	 	templateUrl: 'modal.html',
+	 	templateUrl: 'views/modal.html',
 	 	restrict : 'E',
 	 	replace: true,
         transclude: true,
@@ -16,7 +16,6 @@ app.directive('modal', function () {
         	$scope.closeModal = function() {
         		$scope.showModal = false;
         		$scope.show = false;
-        		console.log($scope.showModal);
         	}
         }
 	 };

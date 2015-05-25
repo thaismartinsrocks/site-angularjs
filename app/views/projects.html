@@ -1,11 +1,8 @@
 <modal item="modalItem" show="showModal" url="baseUrl"></modal>
 
-<div id="view-projects" class="container-fluid">
-
-	<logo></logo>
-	<menu></menu>
-	
+<div id="view-projects" class="container-fluid" style="height:{{pageHeight}}px">	
 	<div class="view-content text-center">
+	
 		<div ng-repeat="project in projects">
 			<div class="project col-sm-3 col-xs-12 text-center"	ng-mouseenter="project.showDescription = true;"
 				ng-mouseleave="project.showDescription = false;">
