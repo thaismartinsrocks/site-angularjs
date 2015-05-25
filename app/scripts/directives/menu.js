@@ -3,7 +3,7 @@
 var app = angular.module('thaisMartins');
 app.directive('menu', function () {
 	 return {
-	 	templateUrl: 'menu.html',
+	 	templateUrl: 'components/menu.html',
 	 	restrict : 'E',
 	 	controller: function($scope, $element, $attrs, $location) {
         	$scope.toogleMenu = function() {

@@ -1,0 +1,15 @@
+<div id="menu" ng-click="toogleMenu()">
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+<div id="fullmenu" ng-show="showMenu == true">
+	<ul>
+		<li ng-repeat="item in menu">
+			<p ng-click="goToPage(item.link)" >{{item.name}}</p>
+		</li>
+	</ul>
+</div>
