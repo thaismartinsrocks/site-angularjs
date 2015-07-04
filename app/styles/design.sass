@@ -1,159 +1,164 @@
-/************** VIEW-DESIGN ****************/
+@import compass/css3, partials/_mixins
+
 #view-design
   background: url('../images/background-design.png') repeat 0 0
 
-  @include border-radius(5px)
-
-.view-content
-  .design-page
-    background-color: #fff
-    padding: 0
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(153,153,153,1)
-    -moz-box-shadow: 0px 0px 15px 0px rgba(153,153,153,1)
-    box-shadow: 0px 0px 15px 0px rgba(153,153,153,1)
-    font-family: 'Rock Salt', cursive
-    font-size: 12px
-    color: #bfbfbf
-    margin-top: -70px
-
-    @include deviceBreak(phone)
-    width: 90% !important
-    margin: 0 5%
-
-    .design-logo
-      margin: 20px 0 20px 10px
-      padding: 10px
-      text-align: center
-      background-image: url('../images/hand-full.png')
-      background-repeat: repeat
-
-    .design-menu
-      margin-right: 0
+  .view-content
+    .design-page
+      background-color: #fff
+      font-family: 'Rock Salt', cursive
+      font-size: 12px
+      color: #bfbfbf
+      margin-top: -70px
       padding: 0
 
-      ul
+      @include box-shadow(rgba(153,153,153,1) 0 0 15px)
+
+      @include deviceBreak(phone)
+      width: 90% !important
+      margin: 0 5%
+
+      .design-logo
+        margin: 20px 0 20px 10px
+        padding: 10px
+        text-align: center
         background-image: url('../images/hand-full.png')
         background-repeat: repeat
-        margin: 20px 0
-        height: 40px
-        list-style: none
+
+      .design-menu
+        margin-right: 0
+        padding: 0
+
+        ul
+          background-image: url('../images/hand-full.png')
+          background-repeat: repeat
+          margin: 20px 0
+          height: 40px
+          list-style: none
+          text-align: center
+
+          li
+            float: left
+            padding: 10px 5px
+
+      .design-slider
+        -moz-border-image: url('../images/hand-line.png') 10 repeat
+        -webkit-border-image: url('../images/hand-line.png') 10 repeat
+        -o-border-image: url('../images/hand-line.png') 10 repeat
+        border-image: url('../images/hand-line.png') 10 repeat
+        border-width: 5px
+        padding: 30px 0
         text-align: center
 
-        li
-          float: left
-          padding: 10px 5px
+        img
+          width: 55%
+          height: 100px
+          opacity: 0.2
+          filter: alpha(opacity=20)
 
-    .design-slider
-      -moz-border-image: url('../images/hand-line.png') 10 repeat
-      -webkit-border-image: url('../images/hand-line.png') 10 repeat
-      -o-border-image: url('../images/hand-line.png') 10 repeat
-      border-image: url('../images/hand-line.png') 10 repeat
-      border-width: 5px
-      padding: 30px 0
-      text-align: center
+      .design-square
+        padding: 20px
 
-      img
-        width: 55%
-        height: 100px
-        opacity: 0.2
-        filter: alpha(opacity=20)
+      .design-text
+        h1
+          font-size: 1em
+          text-align: left
 
-    .design-square
-      padding: 20px
+        ul
+          list-style: none
+          -moz-padding-start: 0
+          -webkit-padding-start: 0
+          -khtml-padding-start: 0
+          -o-padding-start: 0
+          padding-start: 0
 
-    .design-text
-      h1
-        font-size: 1em
-        text-align: left
+          li
+            width: 100%
+            height: 5px
+            margin: 7px 0
+            background:
+              image: url('../images/hand-line.png')
+              repeat: repeat
 
-      ul
-        list-style: none
-        -moz-padding-start: 0
-        -webkit-padding-start: 0
-        -khtml-padding-start: 0
-        -o-padding-start: 0
-        padding-start: 0
-
-      li
-        width: 100%
-        height: 5px
-        margin: 7px 0
+      .design-button
+        width: 50%
+        height: 15px
+        margin: 5px 0 0 50%
+        font-size: 10px
         background:
-          image: url('../images/hand-line.png')
+          image: url('../images/hand-full.png')
           repeat: repeat
 
-#view-design .view-content .design-page .design-text .design-button
-	width: 50%
-	height: 15px
-	background-image: url('../images/hand-full.png')
-	background-repeat: repeat
-	margin: 5px 0 0 50%
-	font-size: 10px
+        @include deviceBreak(phone)
+        width: 100%
+        margin: 0
 
-	@include deviceBreak(phone)
-	width: 100%
-	margin: 0
+      .design-services
+        h1
+          font-size: 1em
+          margin-bottom: 15px
 
-#view-design .view-content .design-page .design-services h1
-	font-size: 1em
-	margin-bottom: 15px
+        ul
+          list-style: none
+          -moz-padding-start: 0
+          -webkit-padding-start: 0
+          -khtml-padding-start: 0
+          -o-padding-start: 0
+          padding-start: 0
 
-#view-design .view-content .design-page .design-services ul
-	list-style: none
-	-moz-padding-start: 0
-	-webkit-padding-start: 0
-	-khtml-padding-start: 0
-	-o-padding-start: 0
-	padding-start: 0
+          li
+            width: 100%
+            height: 5px
+            margin: 7px 0
+            background:
+              image: url('../images/hand-line.png')
+              repeat: repeat
 
-#view-design .view-content .design-page .design-services ul li
-	width: 100%
-	height: 5px
-	margin: 7px 0
-	background-image: url('../images/hand-line.png')
-	background-repeat: repeat
+      .design-social
+        text-align: center
 
-#view-design .view-content .design-page .design-social
-	text-align: center
+        .box
+          margin: 10px
+          padding: 100px 0
+          background:
+            image: url('../images/hand-full.png')
+            repeat: repeat
 
-#view-design .view-content .design-page .design-social .box
-	margin: 10px
-	padding: 100px 0
-	background-image: url('../images/hand-full.png')
-	background-repeat: repeat
+      .design-clients
+        .client-left,
+        .client-right
+          font-size: 2.4em
+          width: 5%
+          margin: 30px 2.5% 0 2.5%
+          float: left
 
-#view-design .view-content .design-page .design-clients .client-left,
-#view-design .view-content .design-page .design-clients .client-right
-	font-size: 2.4em
-	width: 5%
-	margin: 30px 2.5% 0 2.5%
-	float: left
+        .design-client
+          width: 30%
+          margin: 5%
+          float: left
 
-#view-design .view-content .design-page .design-clients .design-client
-	width: 30%
-	margin: 5%
-	float: left
+          ul
+            list-style: none
+            -moz-padding-start: 0
+            -webkit-padding-start: 0
+            -khtml-padding-start: 0
+            -o-padding-start: 0
+            padding-start: 0
 
-#view-design .view-content .design-page .design-clients .design-client ul
-	list-style: none
-	-moz-padding-start: 0
-	-webkit-padding-start: 0
-	-khtml-padding-start: 0
-	-o-padding-start: 0
-	padding-start: 0
+            li
+              width: 100%
+              height: 5px
+              margin: 7px 0
+              background:
+                image: url('../images/hand-line.png')
+                repeat: repeat
 
-#view-design .view-content .design-page .design-clients .design-client ul li
-	width: 100%
-	height: 5px
-	margin: 7px 0
-	background-image: url('../images/hand-line.png')
-	background-repeat: repeat
+          p
+            font-size: 7px
 
-#view-design .view-content .design-page .design-clients .design-client p
-	font-size: 7px
-
-#view-design .view-content .design-page .design-rodape
-	padding: 20px
-	background-image: url('../images/hand-full.png')
-	background-repeat: repeat
-	text-align: center
+      .design-rodape
+        padding: 20px
+        text-align: center
+        background:
+          image: url('../images/hand-full.png')
+          repeat: repeat
